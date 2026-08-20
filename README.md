@@ -1,12 +1,12 @@
-# fact-checker
- FactChecker — GenLayer Intelligent Contract
-**File:** `genlayer-spinner.html`
-**Live Demo:** https://sjvijay55.github.io/Genlayer-Spinner/genlayer-spinner.html
+# FactChecker — GenLayer Intelligent Contract
 
----
+Verifies statements using LLM consensus. Submit any claim, AI validators return TRUE/FALSE/UNCERTAIN with confidence score and explanation. Uses `gl.eq_principle.prompt_comparative` for multi-validator consensus on GenLayer testnet.
 
-## 2. FactChecker — AI Fact Verification Contract
-An Intelligent Contract that verifies any statement using LLM consensus. Users submit a statement, multiple AI validators analyze it, and consensus produces a TRUE/FALSE/UNCERTAIN verdict with confidence score and explanation. Built using gl.eq_principle.prompt_comparative for multi-validator consensus on GenLayer testnet.
+## Usage
+Deploy `fact_checker.py` in GenLayer Studio, then call:
+- `check_fact("your statement")` — runs AI consensus
+- `get_last_result()` — returns verdict JSON
 
-**File:** `fact_checker.py`
-**Contract Address:** 0x5F572A763321b5E41286CF54D44FE63db9a76ED8
+## Example
+Input: `"The Eiffel Tower is in Paris"`
+Output: `{"verdict": "TRUE", "confidence": 100, "explanation": "..."}`
